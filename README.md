@@ -146,4 +146,47 @@ wget https://pjreddie.com/media/files/yolov3.weights
 wget https://pjreddie.com/media/files/yolov3-tiny.weights
 ```
 
+* Darknet Yolo 빌드
+```
+sudo gedit Makefile
+```
+메모장이 열리는데, 
+```
+GPU=0
+CUDNN=0
+OPENCV=0
+```
+을
+```
+GPU=1
+CUDNN=1
+OPENCV=1
+```
+로 변경 후 저장
+
+이후 터미널에 `make` 입력 
+
 ## 사용법
+
+* 이미지 사용
+```
+./darknet detector test cfg/coco.data yolov3.cfg yolov3.weights -ext_output dog.jpg
+```
+
+* 동영상
+```
+./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights -ext_output test.mp4
+```
+
+* 웹캠 (실시간)
+```
+./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights -c 0
+```
+
+### 실행 도중 컴퓨터가 멈출 경우
+```
+cd ~/darknet/cfg
+sudo gedit yolov3.cfg
+```
+`batch` 와 `subdivision`의 값을 1로 변경
+`width`와 `height`를 224로 변경
