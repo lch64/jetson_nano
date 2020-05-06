@@ -34,11 +34,11 @@ sudo apt install -y build-essential cmake pkg-config unzip yasm git checkinstall
 sudo apt install -y libjpeg-dev libpng-dev libtiff-dev
 ```
 
-* 비디오 코덱 설치
+* 비디오 코덱 
 ```
 sudo apt install -y libavcodec-dev libavformat-dev libswscale-dev libavresample-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libxvidcore-dev x264 libx264-dev libfaac-dev libmp3lame-dev libtheora-dev libfaac-dev libmp3lame-dev libvorbis-dev
 ```
-* 카메라 프로그래밍 라이브러리 설치
+* 카메라 프로그래밍 도구 
 ```
 sudo apt-get install libdc1394-22 libdc1394-22-dev libxine2-dev libv4l-dev v4l-utils
 cd /usr/include/linux
@@ -46,6 +46,22 @@ sudo ln -s -f ../libv4l1-videodev.h videodev.h
 cd ~
 ```
 
+* 파이썬 도구
+```
+sudo apt-get install python3-dev python3-pip
+sudo -H pip3 install -U pip numpy
+sudo apt install python3-testresources
+```
+
+* 최적화 도구
+```
+sudo apt-get install libatlas-base-dev gfortran
+```
+
+* 그 외 필요 도구
+```
+sudo apt-get install libprotobuf-dev protobuf-compiler libgoogle-glog-dev libgflags-dev libgphoto2-dev libeigen3-dev libhdf5-dev doxygen libgtk-3-dev libtbb-dev 
+```
 
 
 ## 사용법
