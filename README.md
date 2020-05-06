@@ -8,8 +8,10 @@
 
 ## 설치법
 
+Jetson Nano에서 Yolo를 사용하기 위해서는 opencv 와 CUDA가 필요합니다.
+Cuda는 Jetson Nano에 이미 설치돼 있기 때문에, opencv만 설치하면 됩니다.
+
 ### 1. OpenCV 설치
-#### 설치준비
 * OpenCV 유무 확인
 ```
 sudo apt-get install -y pkg-config
@@ -61,6 +63,15 @@ sudo apt-get install libatlas-base-dev gfortran
 * 그 외 필요 도구
 ```
 sudo apt-get install libprotobuf-dev protobuf-compiler libgoogle-glog-dev libgflags-dev libgphoto2-dev libeigen3-dev libhdf5-dev doxygen libgtk-3-dev libtbb-dev 
+```
+
+* OpenCV 파일 다운로드
+```
+cd ~
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.2.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.2.0.zip
+unzip opencv.zip
+unzip opencv_contrib.zip
 ```
 
 
