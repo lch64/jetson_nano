@@ -3,8 +3,8 @@
 
 
 1.  [Darknet YoloV3 설치법](#설치법)
-    *[OpenCV 설치](#OpenCV-설치)
-    *[Darnet YoloV3 설치](#Darknet-Yolo-설치)
+	*[OpenCV 설치](#OpenCV-설치)
+	*[Darnet YoloV3 설치](#Darknet-Yolo-설치)
 2.  [Darknet YoloV3 사용법](#사용법)
 
 
