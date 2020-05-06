@@ -11,9 +11,17 @@
 ### 1. OpenCV 설치
 #### 설치준비
 * OpenCV 유무 확인
-`sudo apt-get install -y pkg-config`
-`pkg-config --modversion opencv`
+```
+sudo apt-get install -y pkg-config
+pkg-config --modversion opencv
+```
+`No package 'opencv' found` 라고 나올 경우 OpenCV 설치 필요
 
+구버전의 opencv 삭제를 원하는 경우 다음과 같이 진행
+```
+sudo apt purge libopencv*
+sudo apt autoremove
+```
 
 
 * Yolo v4 Full comparison: [map_fps](https://user-images.githubusercontent.com/4096485/80283279-0e303e00-871f-11ea-814c-870967d77fd1.png)
