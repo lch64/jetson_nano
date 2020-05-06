@@ -6,9 +6,13 @@
 2.  [Darknet YoloV3 사용법](#how-to-use-on-the-command-line)
 
 
-### 설치하기
+## 설치하기
 
-1. OpenCV 설치
+### 1. OpenCV 설치
+#### 설치준비
+* OpenCV 유무 확인
+`sudo apt-get install -y pkg-config`
+`pkg-config --modversion opencv`
 
 
 
