@@ -1,47 +1,16 @@
-# Jetson Nano에 Darknet Yolo 설치하기
-
-### (neural network for object detection) - Tensor Cores can be used on [Linux](https://github.com/AlexeyAB/darknet#how-to-compile-on-linux) and [Windows](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake-gui)
-
-Paper Yolo v4: https://arxiv.org/abs/2004.10934
-
-More details: http://pjreddie.com/darknet/yolo/
-
-![Darknet Continuous Integration](https://github.com/AlexeyAB/darknet/workflows/Darknet%20Continuous%20Integration/badge.svg)
-[![CircleCI](https://circleci.com/gh/AlexeyAB/darknet.svg?style=svg)](https://circleci.com/gh/AlexeyAB/darknet)
-[![TravisCI](https://travis-ci.org/AlexeyAB/darknet.svg?branch=master)](https://travis-ci.org/AlexeyAB/darknet)
-[![Contributors](https://img.shields.io/github/contributors/AlexeyAB/Darknet.svg)](https://github.com/AlexeyAB/darknet/graphs/contributors)
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/AlexeyAB/darknet/blob/master/LICENSE)
-[![DOI](https://zenodo.org/badge/75388965.svg)](https://zenodo.org/badge/latestdoi/75388965)
-
-
-* [Requirements (and how to install dependecies)](#requirements)
-* [Pre-trained models](#pre-trained-models)
-* [Explanations in issues](https://github.com/AlexeyAB/darknet/issues?q=is%3Aopen+is%3Aissue+label%3AExplanations)
-* [Yolo v3 in other frameworks (TensorRT, TensorFlow, PyTorch, OpenVINO, OpenCV-dnn, TVM,...)](#yolo-v3-in-other-frameworks)
-* [Datasets](#datasets)
-
-0.  [Improvements in this repository](#improvements-in-this-repository)
-1.  [How to use](#how-to-use-on-the-command-line)
-2.  How to compile on Linux
-    * [Using cmake](#how-to-compile-on-linux-using-cmake)
-    * [Using make](#how-to-compile-on-linux-using-make)
-3.  How to compile on Windows
-    * [Using CMake-GUI](#how-to-compile-on-windows-using-cmake-gui)
-    * [Using vcpkg](#how-to-compile-on-windows-using-vcpkg)
-    * [Legacy way](#how-to-compile-on-windows-legacy-way)
-4.  [Training and Evaluation of speed and accuracy on MS COCO](https://github.com/AlexeyAB/darknet/wiki#training-and-evaluation-of-speed-and-accuracy-on-ms-coco)
-5.  [How to train with multi-GPU:](#how-to-train-with-multi-gpu)
-6.  [How to train (to detect your custom objects)](#how-to-train-to-detect-your-custom-objects)
-7.  [How to train tiny-yolo (to detect your custom objects)](#how-to-train-tiny-yolo-to-detect-your-custom-objects)
-8.  [When should I stop training](#when-should-i-stop-training)
-9.  [How to improve object detection](#how-to-improve-object-detection)
-10.  [How to mark bounded boxes of objects and create annotation files](#how-to-mark-bounded-boxes-of-objects-and-create-annotation-files)
-11. [How to use Yolo as DLL and SO libraries](#how-to-use-yolo-as-dll-and-so-libraries)
+# Jetson Nano에 Darknet Yolo 메뉴얼
 
 
 
-|  ![Darknet Logo](http://pjreddie.com/media/files/darknet-black-small.png) | &nbsp; ![readme](https://user-images.githubusercontent.com/4096485/80213782-5f1e3480-8642-11ea-8fdf-0e6b9a6b5f4c.png) AP50:95 / AP50 - FPS (Tesla V100) Paper: https://arxiv.org/abs/2004.10934 |
-|---|---|
+1.  [Darknet YoloV3 설치법](#설치하기)
+2.  [Darknet YoloV3 사용법](#how-to-use-on-the-command-line)
+
+
+### 설치하기
+
+1. OpenCV 설치
+
+
 
 * Yolo v4 Full comparison: [map_fps](https://user-images.githubusercontent.com/4096485/80283279-0e303e00-871f-11ea-814c-870967d77fd1.png)
 * CSPNet: [paper](https://arxiv.org/abs/1911.11929) and [map_fps](https://user-images.githubusercontent.com/4096485/71702416-6645dc00-2de0-11ea-8d65-de7d4b604021.png) comparison: https://github.com/WongKinYiu/CrossStagePartialNetworks
