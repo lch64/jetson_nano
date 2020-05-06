@@ -21,7 +21,7 @@ pkg-config --modversion opencv
 ```
 `No package 'opencv' found` 라고 나올 경우 OpenCV 설치 필요
 
-구버전의 opencv 삭제를 원하는 경우 다음과 같이 진행
+* 구버전의 opencv 삭제를 원하는 경우 다음과 같이 진행
 ```
 sudo apt purge libopencv*
 sudo apt autoremove
@@ -126,5 +126,24 @@ pkg-config --modversion opencv
 opencv 4.2.0 이 나오면 설치 완료입니다.
 
 ### Darknet Yolo 설치
+* 라이브러리 업데이트
+```
+sudo apt-get update
+```
+
+* CUDA 경로 설정
+```
+export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+
+* Darknet Yolo 다운로드
+```
+cd ~
+git clone https://github.com/AlexeyAB/darknet
+cd darknet
+wget https://pjreddie.com/media/files/yolov3.weights
+wget https://pjreddie.com/media/files/yolov3-tiny.weights
+```
 
 ## 사용법
