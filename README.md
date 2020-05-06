@@ -2,11 +2,11 @@
 
 
 
-1.  [Darknet YoloV3 설치법](#설치하기)
-2.  [Darknet YoloV3 사용법](#how-to-use-on-the-command-line)
+1.  [Darknet YoloV3 설치법](#설치법)
+2.  [Darknet YoloV3 사용법](#사용법)
 
 
-## 설치하기
+## 설치법
 
 ### 1. OpenCV 설치
 #### 설치준비
@@ -45,3 +45,7 @@ cd /usr/include/linux
 sudo ln -s -f ../libv4l1-videodev.h videodev.h
 cd ~
 ```
+
+
+
+## 사용법
