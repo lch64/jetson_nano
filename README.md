@@ -170,16 +170,19 @@ OPENCV=1
 
 * 이미지 사용
 ```
+cd ~/darknet
 ./darknet detector test cfg/coco.data yolov3.cfg yolov3.weights -ext_output dog.jpg
 ```
 
 * 동영상
 ```
+cd ~/darknet
 ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights -ext_output test.mp4
 ```
 
 * 웹캠 (실시간)
 ```
+cd ~/darknet
 ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights -c 0
 ```
 
@@ -188,5 +191,5 @@ OPENCV=1
 cd ~/darknet/cfg
 sudo gedit yolov3.cfg
 ```
-`batch` 와 `subdivision`의 값을 1로 변경
-`width`와 `height`를 224로 변경
+* `batch` 와 `subdivision`의 값을 1로 변경
+* `width`와 `height`를 224로 변경
