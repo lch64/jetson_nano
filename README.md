@@ -126,6 +126,12 @@ sudo make install
 ```
 pkg-config --modversion opencv
 ```
+또는
+```
+python3
+>> import cv2
+>> cv2.__version__
+```
 opencv 4.2.0 이 나오면 설치 완료입니다.
 
 ### Darknet Yolo 설치
