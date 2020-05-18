@@ -20,6 +20,15 @@ sudo apt install -y pkg-config
 pkg-config --modversion opencv
 ```
 `No package 'opencv' found` 라고 나올 경우 OpenCV 설치 필요
+* OpenCV 유무 확인2
+pkg 라이브러리 오류로 openCV가 인식이 안될 수도 있음
+python을 실행해서 opencv설치 유무 확인
+```
+python3
+import cv2
+cv2.__version__
+```
+output 오류가 날 경우 opencv 설치 필요
 
 * 구버전의 opencv 삭제를 원하는 경우 다음과 같이 진행
 ```
@@ -165,7 +174,7 @@ OPENCV=1
 * 이미지 사용
 ```
 cd ~/darknet
-./darknet detector test cfg/coco.data yolov3.cfg yolov3.weights -ext_output dog.jpg
+./darknet detector test cfg/coco.data cfg/yolov3.cfg yolov3.weights -ext_output dog.jpg
 ```
 
 * 동영상
