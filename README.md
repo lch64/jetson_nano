@@ -25,8 +25,8 @@ pkg 라이브러리 오류로 openCV가 인식이 안될 수도 있음
 python을 실행해서 opencv설치 유무 확인
 ```
 python3
-import cv2
-cv2.__version__
+>> import cv2
+>> cv2.__version__
 ```
 output 오류가 날 경우 opencv 설치 필요
 
